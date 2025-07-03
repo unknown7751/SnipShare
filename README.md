@@ -28,7 +28,7 @@ A modern code snippet sharing platform. Share code with output and syntax highli
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/SnipShare.git
+   git clone https://github.com/Auxilus08/SnipShare.git
    cd SnipShare
    ```
 2. Install dependencies:
@@ -76,6 +76,3 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-[MIT](LICENSE) 
