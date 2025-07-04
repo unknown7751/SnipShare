@@ -4,7 +4,7 @@
 
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+      text-wrap: balance;
   }
 }
 
@@ -40,8 +40,8 @@
     --color-3: 210 100% 63%;
     --color-4: 195 100% 63%;
     --color-5: 90 100% 63%;
-  }
-  .dark {
+}
+.dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
@@ -66,18 +66,22 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
+}
 }
 
 @layer base {
   * {
     @apply border-border m-0 p-0;
-  }
-  body {
+}
+body {
     @apply bg-background text-foreground overflow-x-hidden;
-  }
-  .scrollbar-hidden{
+}
+.scrollbar-hidden {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
+}
+.masonry {
+    columns: 3;
+    column-gap: 20;
+}
 }

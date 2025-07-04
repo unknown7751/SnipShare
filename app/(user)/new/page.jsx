@@ -105,6 +105,10 @@ export default function Page() {
     const title = data.title;
     const desc = data.description;
     if (!code) return toast.error("Please write some code!");
+    if (!user || !user.uid) {
+      toast.error("You must be signed in to create a snippet.");
+      return;
+    }
     const uId = user.uid;
     try {
       setPublishing(true);
@@ -117,7 +121,6 @@ export default function Page() {
       newDoc.then((e) => {
         setPubId(null);
         toast.success("Snippet created successfully!");
-        
         setCode(null);
         setOutput(null);
         setPubId(e);
