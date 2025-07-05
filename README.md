@@ -8,6 +8,7 @@ A modern code snippet sharing platform. Share code with output and syntax highli
 - **Syntax Highlighting**: Monaco Editor and Prism for beautiful code display
 - **Run Code**: Execute code snippets using the [Piston API](https://emkc.org/api/v2/piston/execute)
 - **User Dashboard**: View, manage, and delete your snippets
+- **Demo Functionality**: Interactive demo page showcasing platform features with pre-created examples
 - **Responsive UI**: Built with Next.js App Router and Tailwind CSS
 - **Theming**: Light/dark mode support
 
@@ -64,10 +65,22 @@ Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Usage
 - **Sign in** with Google or GitHub
+- **View demos** to explore platform features
 - **Create a new snippet** from the dashboard
 - **Write and run code** in supported languages
 - **Share your snippet** with others
 - **Manage your snippets** from your profile
+
+## Demo Functionality
+
+SnipShare includes a comprehensive demo system to showcase platform features:
+
+- **Demo Page** (`/demo`): Interactive gallery of demo snippets
+- **Demo Snippets**: Pre-created examples in JavaScript, Python, Java, and C++
+- **Admin Interface** (`/admin/demo`): Easy management of demo content
+- **API Endpoint** (`/api/demo`): Server-side demo snippet creation
+
+For detailed documentation, see [DEMO_FUNCTIONALITY.md](./DEMO_FUNCTIONALITY.md).
 
 ## Authentication Callback URLs
 - For Firebase Auth with Google/GitHub, set the callback/redirect URL to:

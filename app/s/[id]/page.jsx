@@ -11,7 +11,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { Copy, Loader2, Play } from "lucide-react";
+import { Copy, Loader2, Play, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { LANGUAGE_CONFIG } from "@/app/_constants/config";
@@ -19,6 +19,7 @@ import Footer from "@/components/page/footer";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
 export default function Page({ params }) {
@@ -139,7 +140,7 @@ export default function Page({ params }) {
 
   if (loading) {
     return (
-      <div className="px-6 md:px-20 lg:px-32 mb-10">
+      <div className="px-6 md:px-20 lg:px-32 py-4">
         <div className="grid gap-2">
           <Skeleton className="h-4 w-40" />
           <Skeleton className="h-4 w-52" />
@@ -180,7 +181,15 @@ export default function Page({ params }) {
   }
   return (
     <div className="px-6 md:px-20 lg:px-32 mb-10">
-      <h1 className="text-lg font-bold">{snip?.title}</h1>
+      <div className="flex items-center gap-3 mb-2">
+        <h1 className="text-lg font-bold">{snip?.title}</h1>
+        {snip?.author === "demo" && (
+          <Badge variant="secondary" className="text-xs">
+            <Sparkles className="h-3 w-3 mr-1" />
+            Demo
+          </Badge>
+        )}
+      </div>
       <p className="text-sm -mt-0.5 text-foreground/80">
         {snip?.desc ? snip?.desc : "No description"}
       </p>
