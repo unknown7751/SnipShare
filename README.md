@@ -80,8 +80,6 @@ SnipShare includes a comprehensive demo system to showcase platform features:
 - **Admin Interface** (`/admin/demo`): Easy management of demo content
 - **API Endpoint** (`/api/demo`): Server-side demo snippet creation
 
-For detailed documentation, see [DEMO_FUNCTIONALITY.md](./DEMO_FUNCTIONALITY.md).
-
 ## Authentication Callback URLs
 - For Firebase Auth with Google/GitHub, set the callback/redirect URL to:
   - `http://localhost:3000/` (for local development)
